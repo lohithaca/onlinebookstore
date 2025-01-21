@@ -9,6 +9,12 @@ pipeline{
 				echo "========Building========"
 				sh 'mvn clean install'
 			}
+		stage('Test'){
+			steps{
+				echo "========Testing========="
+				sh 'mvn test'
+			}
+		}
 			post{
 				always{
 					echo "========always========"
